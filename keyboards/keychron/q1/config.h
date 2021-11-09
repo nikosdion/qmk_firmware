@@ -18,7 +18,14 @@
 
 
 /* USB Device descriptor parameter */
-#define VENDOR_ID       0x3434
+// Changed the USB Vendor ID (VID) and Product ID (PID) to pretend this is an Apple keyboard
+// See: https://github.com/qmk/qmk_firmware/issues/2179#issuecomment-569851038
+// I used the PID of the Apple Aluminium Keyboard (ISO) to trick macOS into giving me the same shortcuts
+// See: https://elixir.bootlin.com/linux/latest/source/drivers/hid/hid-ids.h#L93
+#define VENDOR_ID       0x05AC
+#define PRODUCT_ID      0x0250
+
+//#define VENDOR_ID       0x3434
 #define MANUFACTURER    Keychron
 #define PRODUCT         Keychron Q1
 
@@ -44,7 +51,10 @@
 #define MATRIX_MASKED
 
 /* NKRO */
-#define FORCE_NKRO
+//#define FORCE_NKRO
+
+// Enable Apple fn key support
+#define APPLE_FN_ENABLE
 
 /* Disable a single effect */
 #define DISABLE_RGB_MATRIX_ALPHAS_MODS
