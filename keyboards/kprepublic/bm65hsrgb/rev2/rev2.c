@@ -19,9 +19,9 @@
 #include QMK_KEYBOARD_H
 
 #ifdef RGB_MATRIX_ENABLE
-#    include <i2c_master.h>
-#    include <is31fl3741.h>
-#    include <ws2812.h>
+#    include "i2c_master.h"
+#    include "is31fl3741.h"
+#    include "ws2812.h"
 
 // clang-format off
 
