@@ -25,15 +25,15 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 // See: https://github.com/qmk/qmk_firmware/issues/2179#issuecomment-569851038
 // I used the PID of the Apple Aluminium Keyboard (ANSI) to trick macOS into giving me the same shortcuts
 // See: https://elixir.bootlin.com/linux/latest/source/drivers/hid/hid-ids.h#L93
-//#define VENDOR_ID       0x20A0
-//#define PRODUCT_ID      0x422D
-#define VENDOR_ID       0x05AC
-#define PRODUCT_ID      0x024F
+#define VENDOR_ID       0x20A0
+#define PRODUCT_ID      0x422D
+//#define VENDOR_ID       0x05AC
+//#define PRODUCT_ID      0x024F
 
 #define MANUFACTURER    YMDK
 // Changed the USB Product string to a custom version
-//#define PRODUCT         YMD75 / MT84
-#define PRODUCT         YMD75 (Apple Mod)
+#define PRODUCT         YMD75 / MT84
+//#define PRODUCT         YMD75 (Apple Mod)
 
 #define BACKLIGHT_LEVELS 12
 
@@ -48,4 +48,4 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define DYNAMIC_KEYMAP_LAYER_COUNT 3
 
 // Enable Apple fn key support
-#define APPLE_FN_ENABLE
+//#define APPLE_FN_ENABLE
