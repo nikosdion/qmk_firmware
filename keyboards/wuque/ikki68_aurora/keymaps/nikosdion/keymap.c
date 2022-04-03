@@ -56,13 +56,16 @@ void keyboard_post_init_user(void) {
 layer_state_t layer_state_set_user(layer_state_t state) {
     switch (get_highest_layer(state)) {
     case 1:
-        rgblight_sethsv_noeeprom_magenta(); rgblight_mode_noeeprom(1);
+        rgblight_sethsv_noeeprom(213, 255, 64);
+        rgblight_mode_noeeprom(1);
         break;
     case 2:
-        rgblight_sethsv_noeeprom_red(); rgblight_mode_noeeprom(1);
+        rgblight_sethsv_noeeprom(0, 255, 64);
+        rgblight_mode_noeeprom(1);
         break;
     default: //  for any other layers, or the default layer
-        rgblight_sethsv_noeeprom_teal(); rgblight_mode_noeeprom(1);
+        rgblight_sethsv_noeeprom(128, 255, 64);
+        rgblight_mode_noeeprom(1);
         break;
     }
 
