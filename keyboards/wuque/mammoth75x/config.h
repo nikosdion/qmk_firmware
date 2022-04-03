@@ -20,8 +20,14 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #include "config_common.h"
 
 /* USB Device descriptor parameter */
-#define VENDOR_ID       0xA06B
-#define PRODUCT_ID      0x0004
+// Changed the USB Vendor ID (VID) and Product ID (PID) to pretend this is an Apple keyboard
+// See: https://github.com/qmk/qmk_firmware/issues/2179#issuecomment-569851038
+// I used the PID of the Apple Aluminium Keyboard (ANSI) to trick macOS into giving me the same shortcuts
+// See: https://elixir.bootlin.com/linux/latest/source/drivers/hid/hid-ids.h#L93
+// #define VENDOR_ID       0xA06B
+// #define PRODUCT_ID      0x0004
+#define VENDOR_ID       0x05AC
+#define PRODUCT_ID      0x024F
 #define DEVICE_VER      0x0001
 #define MANUFACTURER    wuque studio
 #define PRODUCT         mammoth75x
@@ -55,3 +61,6 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 #define LED_CAPS_LOCK_PIN B6
 #define LED_PIN_ON_STATE 0
+
+// Enable Apple fn key support
+#define APPLE_FN_ENABLE
