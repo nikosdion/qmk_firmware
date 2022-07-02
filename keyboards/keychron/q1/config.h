@@ -16,7 +16,6 @@
 
 #pragma once
 
-
 /* USB Device descriptor parameter */
 // Changed the USB Vendor ID (VID) and Product ID (PID) to pretend this is an Apple keyboard
 // See: https://github.com/qmk/qmk_firmware/issues/2179#issuecomment-569851038
@@ -55,6 +54,14 @@
 
 // Enable Apple fn key support
 #define APPLE_FN_ENABLE
+
+/* Disable RGB lighting when PC is in suspend */
+#define RGB_DISABLE_WHEN_USB_SUSPENDED
+
+/* Allow VIA to edit lighting */
+#ifdef VIA_ENABLE
+#define VIA_QMK_RGBLIGHT_ENABLE
+#endif
 
 // RGB Matrix Animation modes. Explicitly enabled
 // For full list of effects, see:
@@ -104,3 +111,8 @@
 #define ENABLE_RGB_MATRIX_MULTISPLASH
 #define ENABLE_RGB_MATRIX_SOLID_SPLASH
 #define ENABLE_RGB_MATRIX_SOLID_MULTISPLASH
+
+/* Allow VIA to edit lighting */
+#ifdef VIA_ENABLE
+#define VIA_QMK_RGBLIGHT_ENABLE
+#endif
