@@ -994,7 +994,8 @@ __attribute__((weak)) void unregister_code(uint8_t code) {
         del_key(code);
         send_keyboard_report();
     }
-#endif#ifdef MOUSEKEY_ENABLE
+#endif
+#ifdef MOUSEKEY_ENABLE
     else if IS_MOUSEKEY (code) {
         mousekey_off(code);
         mousekey_send();
