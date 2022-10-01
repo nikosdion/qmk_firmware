@@ -24,8 +24,8 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 // See: https://github.com/qmk/qmk_firmware/issues/2179#issuecomment-569851038
 // I used the PID of the Apple Aluminium Keyboard (ANSI) to trick macOS into giving me the same shortcuts
 // See: https://elixir.bootlin.com/linux/latest/source/drivers/hid/hid-ids.h#L93
-// #define VENDOR_ID       0x706B
-// #define PRODUCT_ID      0x0011
+//#define VENDOR_ID       0x706B
+//#define PRODUCT_ID      0x0011
 #define VENDOR_ID       0x05AC
 #define PRODUCT_ID      0x024F
 #define DEVICE_VER      0x0001
