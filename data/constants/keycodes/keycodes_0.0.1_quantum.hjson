@@ -507,6 +507,13 @@
             "aliases": [
                 "AC_TOGG"
             ]
+        },
+        "0x7DFF": {
+            "group": "quantum",
+            "key": "KC_APPLE_FN",
+            "aliases": [
+                "KC_APFN"
+            ]
         }
     }
 }
