@@ -182,6 +182,9 @@ enum mods_bit {
     MOD_RALT = 0x14,
     MOD_RGUI = 0x18,
 };
+#define MOD_HYPR (MOD_LCTL | MOD_LSFT | MOD_LALT | MOD_LGUI)
+#define MOD_MEH (MOD_LCTL | MOD_LSFT | MOD_LALT)
+
 enum mods_codes {
     MODS_ONESHOT    = 0x00,
     MODS_TAP_TOGGLE = 0x01,
@@ -195,7 +198,11 @@ enum mods_codes {
 
 /** \brief Other Keys
  */
-enum usage_pages { PAGE_SYSTEM, PAGE_CONSUMER };
+enum usage_pages {
+    PAGE_SYSTEM,
+    PAGE_CONSUMER,
+};
+
 #define ACTION_USAGE_SYSTEM(id) ACTION(ACT_USAGE, PAGE_SYSTEM << 10 | (id))
 #define ACTION_USAGE_CONSUMER(id) ACTION(ACT_USAGE, PAGE_CONSUMER << 10 | (id))
 #define ACTION_APPLE_FN() ACTION(ACT_APPLE_FN, 0)
